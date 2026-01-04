@@ -1,0 +1,1 @@
+import{r as s,j as t}from"./index-eXW1r-od.js";import{g as n}from"./Api-Bb8fZ5fx.js";import{M as i}from"./MovieList-Dxvhgh1p.js";const f=()=>{const[e,o]=s.useState([]);return s.useEffect(()=>{async function r(){const a=await n();o(a)}r()},[]),t.jsxs(t.Fragment,{children:[t.jsx("h1",{children:"Trending today"}),e.length>0&&t.jsx(i,{movies:e})]})};export{f as default};

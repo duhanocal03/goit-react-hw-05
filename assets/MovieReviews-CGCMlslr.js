@@ -1,0 +1,1 @@
+import{b as n,r as o,j as s}from"./index-eXW1r-od.js";import{c}from"./Api-Bb8fZ5fx.js";const f=()=>{const{movieId:t}=n(),[i,r]=o.useState([]);return o.useEffect(()=>{async function e(){const a=await c(t);r(a)}e()},[t]),i.length?s.jsx("ul",{children:i.map(e=>s.jsx("li",{children:e.content},e.id))}):s.jsx("p",{children:"No reviews found"})};export{f as default};
