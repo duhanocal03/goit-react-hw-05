@@ -12,7 +12,7 @@ const MovieCast = () => {
     async function load() {
       const data = await getMovieCredits(movieId);
       setCast(data.cast ?? []);
-    }
+      }
 
     load();
   }, [movieId]);
@@ -21,18 +21,22 @@ const MovieCast = () => {
     return <p>No cast information found.</p>;
   }
 
+ const getImage = (path) => {
+  if (!path) {
+    return "https://via.placeholder.com/200x300?text=No+Image";
+  }
+
+  return `${IMG_BASE}${path}`;
+};
+    
   return (
     <ul>
       {cast.map(actor => (
         <li key={actor.id}>
           <img
-            src={
-              actor.profile_path
-                ? `${IMG_BASE}${actor.profile_path}`
-                : "https://via.placeholder.com/200x300?text=No+Image"
-            }
-            alt={actor.name}
-          />
+  src={getImage(actor.profile_path)}
+  alt={actor.name}
+/>
           <p>{actor.name}</p>
           <p>as {actor.character}</p>
         </li>

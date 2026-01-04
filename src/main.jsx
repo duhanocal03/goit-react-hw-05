@@ -7,7 +7,7 @@ import App from "./components/App/App.jsx";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter  basename="/goit-react-hw-05">
       <App />
     </BrowserRouter>
   </React.StrictMode>
